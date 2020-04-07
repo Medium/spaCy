@@ -26,6 +26,9 @@ from spacy.util import minibatch, compounding
 logger = logging.getLogger(__name__)
 
 
+spacy.prefer_gpu()
+
+
 @plac.annotations(
     dir_kb=("Directory with KB, NLP and related files", "positional", None, Path),
     output_dir=("Output directory", "option", "o", Path),
